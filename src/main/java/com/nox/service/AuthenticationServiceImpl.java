@@ -37,7 +37,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
     // List of Allowed Admins as of now
     private static final List<String> ADMIN_USER_LIST = Collections.unmodifiableList(List.of("bharatch@yahoo.in", "admin@gmail.com",
-            "bharat@gmail.com", "amar@gmail.com", "bartosz@gmail.com", "bartosz@yahoo.com", "bharat@yahoo.com", "admin@yahoo.com"));
+            "bharat@gmail.com", "amar@gmail.com", "bartosz@gmail.com", "bartosz@yahoo.com", "admin@yahoo.com", "admin@hotmal.com"));
 
     private final AuthenticationRepository authenticationRepository;
 
@@ -56,9 +56,9 @@ public class AuthenticationServiceImpl implements AuthenticationService {
                 .name(createdUser.getCustomerName()).assignedRole(createdUser.getCustomerRole()).build();
     }
 
+    // Dummy method to view the user id and password without Frontend
     @Override
     public List<Customer> retrieveUsers() {
-        // authenticationRepository.deleteAll(); //TODO to refresh the database records when required
         return authenticationRepository.findAll();
     }
 
