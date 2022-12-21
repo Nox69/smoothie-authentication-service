@@ -24,6 +24,10 @@ import lombok.RequiredArgsConstructor;
 
 @Service
 @Transactional
+/**
+ * the `@Transactional` annotation grants that all db operations inside this method will be executed inside a transaction and that all operations will
+ * succeed or all operations will be rolled back.
+ */
 @RequiredArgsConstructor
 public class AuthenticationServiceImpl implements AuthenticationService {
 
@@ -54,7 +58,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
     @Override
     public List<Customer> retrieveUsers() {
-        // authenticationRepository.deleteAll();
+        // authenticationRepository.deleteAll(); //TODO to refresh the database records when required
         return authenticationRepository.findAll();
     }
 

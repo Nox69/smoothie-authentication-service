@@ -14,6 +14,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * This is a Domain Driven Design Entity for a Customer.
+ */
 @Entity
 @Data
 @AllArgsConstructor
