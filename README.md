@@ -7,10 +7,10 @@ This is the authentication Service for Smoothie Application
 The service has a few requirements that is been implemented
 
 ### 1. Register Customers 
-Customers can be registered with their basic details.
+Customers can be registered with their basic details. There is list of email ids which are whitelisted in order for them to be admin. Register with them to become a business owner or else dummy email ids can be used as end-users.
 
 ###  2. Login and Authenticate Customers
-Customer should enter valid credentials in order to be authenticated and get the JWT Access Token.
+Customer should enter valid credentials in order to be authenticated and get the JWT Access Token. Use correct credentials in order to authenticate the customer. The JWT Token returned will consist of the claims containing emailId and role of the customer.
 
 ## Technical Details
 
