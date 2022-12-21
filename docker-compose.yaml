@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  db:
+    image: 'postgres:13.1-alpine'
+    container_name: authentication-service-db
+    ports:
+      - 5432:5432
+    volumes:
+      - authentication-service-db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=authenticationdb
+
+volumes:
+  authentication-service-db:
+    external: false
