@@ -11,6 +11,6 @@ public class LoggedInUser {
 
     private String name;
     private String token;
-    private boolean isAuthenticated;
+    private String role;
 
 }

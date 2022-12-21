@@ -69,7 +69,8 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         if (loggedInCustomer.isEmpty()) {
             throw new CustomerNotFoundException("Invalid Credentials Entered for : " + request.getEmailId());
         }
-        return LoggedInUser.builder().name(loggedInCustomer.get().getCustomerName()).token(generateToken(loggedInCustomer.get())).build();
+        return LoggedInUser.builder().name(loggedInCustomer.get().getCustomerName()).token(generateToken(loggedInCustomer.get()))
+                .role(loggedInCustomer.get().getCustomerRole()).build();
     }
 
     // generate token for Customer
