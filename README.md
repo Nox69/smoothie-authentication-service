@@ -47,7 +47,9 @@ cd smoothie-authentication-service
 Start/update the service using the command below:
 
 ```sh
-./ && docker-compose up -d --build
+./ docker-compose up -d --build
+mvn clean install
+java -jar app.jar
 ```
 
 Stop the service using the command below:
